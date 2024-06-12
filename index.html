@@ -6,29 +6,37 @@
         <script src="Logic.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body class="바디">
+    <body class="바디" onload="Logic()">
+    <!--UISequence--
+            ---NavBar---
+            ---Header---
+            ---About---
+            ---Featured 영화들 음반 워크---
+            ---Skills---
+            ---편집들 일듣이---
+            ---Featured Photos---
+            ---Contact---
+            ---Footer---
+    -->
 
-        <!-----NAVIGATION BAR----->
+
+        <!----NAVIGATION BAR---->
         <div class="nav">
             <a href="http://" id="nvbtn"> 홈 </a>
             <a href="http://" id="nvbtn"> 아카이브 </a>
             <a href="http://" id="nvbtn"> 소셜들 </a>
             <a href="http://" id="nvbtn"> 영화 및 음반 목록 </a>
             <a href="http://" id="nvbtn"> 행사 및 공연 </a>
-            <a href="http://" id="nvbtn"> 뉴스 및 블로그 </a>
             <a href="http://" id="nvbtn"> 클라이언트 작업 </a>
             <div style="float: right; margin-right: 50px; border-radius: 15px; background-color: rgba(100, 100, 100, 0.25); padding: 7px;">
                 <a href="http://" id="nvbtn-lng"> KR</a>
                 <a href="http://" id="nvbtn-lng" style="color: transparent;">-</a>
                 <a href="http://" id="nvbtn-lng">EN </a>
+            </div>
         </div>
-        </div>
-        
-        <!-----SIDEBAR----->
-        
 
 
-        <!-----HEAD IMAGE---->
+        <!----HEAD IMAGE---->
         <div class="해드">
             <div id="해드의센터">
                 <h1> 이승재 </h1>
@@ -37,7 +45,73 @@
         </div>
 
 
-        <!-----Page Containers----->
-        <div style="margin-top: 50%; background: #0b0b11; width: 100%; height: 19999px;"></div>
+        <!----SECTIONS---->
+            <!---About--->
+            <div class="about">
+                <div class="about-container">
+                    <div style="width: 50%; overflow:hidder;border-radius:20px;border: 1px solid white;">
+                      <table>
+                        <tr>
+                          <th>String</th>
+                          <th>Value</th>
+                        </tr>
+                        <tr>
+                          <td>BirthName</td>
+                          <td>SeungJae's Birth Name</td>
+                        </tr>
+                        <tr>
+                          <td>StageName</td>
+                          <td>SeungJae's Stage Name</td>
+                        </tr>
+                        <tr>
+                          <td>Birthday</td>
+                          <td>SeungJae's Birthday</td>
+                        </tr>
+                        <tr>
+                          <td>BirthPlace</td>
+                          <td>SeungJae's Birth Place</td>
+                        </tr>
+                        <tr>
+                          <td>HomeTown</td>
+                          <td>SeungJae's Hometown</td>
+                        </tr>
+                        <tr>
+                          <td>Family</td>
+                          <td>SeungJae's Family</td>
+                        </tr>
+                        <tr>
+                          <td>Education</td>
+                          <td>SeungJae's Education</td>
+                        </tr>
+                        <tr>
+                          <td>Zodiac Sign</td>
+                          <td>SeungJae's Zodiac Sign</td>
+                        </tr>
+                        <tr>
+                          <td>MBTI</td>
+                          <td>SeungJae's MBTI</td>
+                        </tr>
+                        <tr>
+                          <td>Height</td>
+                          <td>SeungJae's Height</td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div style="width: 50%;">
+                      <div style="text-align: center;">
+                        <img src="your-profile-image.jpg" alt="Profile Image" class="profile-img">
+                        <h1 id="정보"> 이승재 정보 </h1>
+                        <p>소설의 숨결 통증은 정상적인 변비로 이어진다. - 버스가 필요해요 - 전 척수가 필요해요, 고관절 통증, 호흡곤란, 광범위한 채무불이행, 그리고 숨쉬는 고통이 정상적인 변비로 이어집니다. 척수, 고관절 통증, 버스가 필요해요 급성 호흡, 광범위한 부채 탕감, 재발</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+
+            <!---Featured 영화들 음반 워크--->
+            <!---Skills--->
+            <!---편집들 일듣이--->
+            <!---Featured Photos--->
+            <!---Contact--->
     </body>
 </html>
