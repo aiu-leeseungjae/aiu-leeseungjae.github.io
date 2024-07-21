@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>이승재 - 홈</title>
+
+        <script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    // Get the height of the header image
+    var headerHeight = document.querySelector('.Header').offsetHeight;
+
+    // Check if the scroll position is greater than the header height
+    if (document.body.scrollTop > headerHeight || document.documentElement.scrollTop > headerHeight) {
+        // Add the "show" class to the navbar
+        document.getElementById("navbar").classList.add("show");
+        document.getElementById("Perf-Side").style.width = "20%";
+        document.getElementById("Perf-Side").style.marginLeft = "0";
+        document.getElementById("Peerformance").style.opacity = "100";
+        document.getElementById("Peerformance").style.width = "80%";
+        document.getElementById("Perf-Control").style.background = "#cdd0ff";
+    } else {
+        // Remove the "show" class from the navbar
+        document.getElementById("navbar").classList.remove("show");
+    }
+}
+
+        </script>
+</head>
+<body class="has-scrollbar">
+
+    <!--- HEADER IMAGE - FULL --->
+    <div class="Header">
+        <div id="HeaderCenter">
+            <h1> 이승재 </h1>
+            <h3> 다양한 분야에서 경험을 쌓아온 사람입니다! </h3>
+        </div>
+    </div>
+
+    <!--- Featured Performance - FULL --->
+    <div class="Full Performance" id="Perf-Control">
+        <div id="Perf-Side">
+            <h1 style="font-size: 38px;"> Performance </h1>
+            <h1 style="font-size: 18px; margin-top: -17px; color: rgb(0, 0, 82);"> By 이승재 </h1>
+            <h1 style="font-size: 15px; margin-top: -70px; color: #444; font-style: italic;"> 2024-09-09 </h1>
+            <h1 style="font-size: 20px; margin-top: -90px; color: #a42036;"> "Spain - Chick Corea" </h1>
+            <h1 style="font-size: 27px; margin-top: -100px;"> @MusicForce </h1>
+        </div>
+        <img src="HEAD.png" alt="" id="Peerformance">
+    </div>
+
+    <!--- Featured Music Demo - HALF --->
+    <div class="Half" style="background-color: rgb(26, 230, 162); margin-top: 101vh;">
+
+    </div>
+    <!--- Latest Albums and Films - HALF --->
+    <div class="Half" style="background-color: rgb(182, 21, 179); margin-top: 0vh;">
+        <div class="HM-Album-Container">
+            <img src="album.jpg" alt="Album Cover" class="album-cover">
+            <div class="HM-Album-Info">
+                <h2 class="title">Album Title</h2>
+                <p class="artist">Artist Name</p>
+                <p class="album">Album Name</p>
+                <p class="date">Release Date: YYYY-MM-DD</p>
+            </div>
+        </div>
+        <div class="HM-Album-Container">
+            <img src="album.jpg" alt="Album Cover" class="album-cover">
+            <div class="HM-Album-Info">
+                <h2 class="title">Album Title</h2>
+                <p class="artist">Artist Name</p>
+                <p class="album">Album Name</p>
+                <p class="date">Release Date: YYYY-MM-DD</p>
+            </div>
+        </div>
+        <div class="HM-Album-Container">
+            <img src="album.jpg" alt="Album Cover" class="album-cover">
+            <div class="HM-Album-Info">
+                <h2 class="title">Album Title</h2>
+                <p class="artist">Artist Name</p>
+                <p class="album">Album Name</p>
+                <p class="date">Release Date: YYYY-MM-DD</p>
+            </div>
+        </div>
+        <div class="HM-Album-Container">
+            <img src="album.jpg" alt="Album Cover" class="album-cover">
+            <div class="HM-Album-Info">
+                <h2 class="title">Album Title</h2>
+                <p class="artist">Artist Name</p>
+                <p class="album">Album Name</p>
+                <p class="date">Release Date: YYYY-MM-DD</p>
+            </div>
+        </div>
+        <div class="HM-Album-Container">
+            <img src="album.jpg" alt="Album Cover" class="album-cover">
+            <div class="HM-Album-Info">
+                <h2 class="title">Album Title</h2>
+                <p class="artist">Artist Name</p>
+                <p class="album">Album Name</p>
+                <p class="date">Release Date: YYYY-MM-DD</p>
+            </div>
+        </div>
+
+
+    </div>
+    <!--- Featured Programming & Beats - FULL --->
+    <!--- Portfolio Bars - half --->
+    
+    <!--- NAVIGATION BAR --->
+    <ul id="navbar">
+        <li><a href="#home">홈</a></li>
+        <li><a href="#home">게시물</a></li>
+        <li><a href="#news">영화 및 음반 목록</a></li>
+        <li><a href="#home">공연들</a></li>
+        <li><a href="#news">작업들</a></li>
+        <li><a href="#home">뉴스 및 블로그</a></li>
+        <li><a href="#news">정보</a></li>
+    </ul>
+
+</body>
+</html>
