@@ -3,117 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="7.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
     <title>이승재 - 홈</title>
-    <style>
-        body {
-            margin: 0;
-            background:black;
-        }
-        #navbar {
-    list-style-type: none;
-    position: fixed;
-    top: -50px;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-bottom: 1px solid rgb(176, 176, 176);
-    height: 50px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    transition: top 0.5s ease, opacity 0.5s ease;
-    opacity: 0;
-    z-index: 1;
-}
-#navbar.show {
-    top: 0;
-    opacity: 1;
-}
 
-        li {
-            float: left;
-        }
-
-        li a, .dropbtn {
-            display: inline-block;
-            color: rgb(32, 32, 32);
-            text-align: center;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            padding-left: 12px;
-            padding-right: 12px;
-            text-decoration: none;
-            font-size: 18px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-        }
-        @keyframes fadebtn{from{background-color: rgba(255, 255, 255, 0);} to{background-color: rgba(255, 255, 255, 0.65);}}
-        li a:hover, .dropdown:hover .dropbtn {
-            background-color: rgba(255, 255, 255, 0.65);
-            border-radius: 5px;
-            animation: fadebtn 0.5s;
-        }
-        .Header{
-    background: url("HEADD.png");
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: soft-light;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position:absolute;
-    display: flex;
-    align-items: center;
-}
-.Header h1{
-    color: rgb(36, 36, 36);
-    font-size: 100px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    text-align: center;
-    animation:animatezoom 2s;
-}
-@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
-.Header h3{
-    text-align: center;
-    font-size: 20px;
-    color: rgb(52, 52, 52);
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: -0px;
-    animation: animatefade 4s;
-}
-@keyframes animatefade{from{opacity: 0;} to{opacity: 1;}}
-#HeaderCenter{
-    margin-left: auto;
-    margin-right: auto;
-}
-.Full {
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: soft-light;
-    width: 100%;
-    height: 100%;
-    margin-top: 101vh;
-    position: absolute;
-}
-.Half{
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: soft-light;
-    width: 100%;
-    height: 50%;
-    margin-top: 201vh;
-    position: absolute;
-    background-color: #a42036;
-}
-    </style>
         <script>
 window.onscroll = function() {scrollFunction()};
+
+
+// Set the background image using the style property
 
 function scrollFunction() {
     // Get the height of the header image
@@ -127,55 +26,37 @@ function scrollFunction() {
         document.getElementById("Perf-Side").style.marginLeft = "0";
         document.getElementById("Peerformance").style.opacity = "100";
         document.getElementById("Peerformance").style.width = "80%";
+        document.getElementById("Perf-Control").style.backgroundImage = "url(Perf-Back.png)";
     } else {
         // Remove the "show" class from the navbar
         document.getElementById("navbar").classList.remove("show");
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+            // Get the video and button elements
+            var video = document.getElementById('Peerformance');
+            var button = document.getElementById('Win11button');
+
+            // Function to toggle play/pause
+            function togglePlayPause() {
+                if (video.paused) {
+                    video.play();
+                    button.innerHTML = "<i class='fa fa-pause' style='color: midnightblue;'></i> Pause";
+                } else {
+                    video.pause();
+                    button.innerHTML = "<i class='fa fa-play' style='color: midnightblue;'></i> Play";
+                }
+            }
+
+            // Add click event listener to the button
+            button.addEventListener('click', togglePlayPause);
+        });
         </script>
 
-        <style>
-            .Performance{
-                                width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    position:absolute;
-    overflow: hidden;
-
-            }
-            #Peerformance{
-                width: 100%;
-                height: 100%;
-                float: left;
-                opacity: 0;
-                transition: 0.5s ease;
-            }
-            #Perf-Side{
-                height: 100%;
-                width: 0%;
-                margin-left: -500px;
-                display: grid;
-                grid-template-columns: auto;
-                grid-template-rows: 50px 50px 50px 50px 50px;
-                justify-content: center;
-                align-items: center;
-                float: left;
-                flex-direction: column;
-                padding-top: 20%;
-                padding-bottom: 20%;
-                transition: 1s ease;
-            }
-            #Perf-Side h1{
-                display: block;
-                width: 100%;
-                font-family: arial;
-                text-align: center;
-            }
-        </style>
+    
 </head>
-<body>
+<body class="has-scrollbar">
 
     <!--- HEADER IMAGE - FULL --->
     <div class="Header">
@@ -185,27 +66,65 @@ function scrollFunction() {
         </div>
     </div>
 
-    <div style="margin-top: 5px;"></div>
-
     <!--- Featured Performance - FULL --->
-    <div class="Full Performance" style="background-color: rgb(205, 208, 255);">
+    <div class="Full Performance" style=" background-position: center; background-size: 100% 100%;" id="Perf-Control">
         <div id="Perf-Side">
-            <h1 style="font-size: 38px;"> Performance </h1>
-            <h1 style="font-size: 18px; margin-top: -17px; color: rgb(0, 0, 82);"> By 이승재 </h1>
-            <h1 style="font-size: 15px; margin-top: -70px; color: #444; font-style: italic;"> 2024-09-09 </h1>
-            <h1 style="font-size: 20px; margin-top: -90px; color: #a42036;"> "Spain - Chick Corea" </h1>
-            <h1 style="font-size: 27px; margin-top: -100px;"> @MusicForce </h1>
+            <div class="words">
+            <h1 style="font-size: 2.8vw;"> Performance </h1>
+            <h1 style="font-size: 1.2vw;color: rgb(0, 0, 82);"> By 이승재 </h1>
+            <h1 style="font-size: 1.1vw;color: #444; font-style: italic;"> 2024-09-09 </h1>
+            <h1 style="font-size: 1.6vw;color: #a42036;"> "Spain - Chick Corea" </h1>
+            <h1 style="font-size: 1.7vw;"> @MusicForce </h1></div>
+            <button id="Win11button" > <i class="fa fa-play" style="color: midnightblue;"></i> Play </button>
         </div>
-
-
-<img src="HEAD.png" alt="" id="Peerformance">
-        
+        <video src="front-video.mp4" id="Peerformance"></video>
     </div>
 
     <!--- Featured Music Demo - HALF --->
-    <div class="Half"></div>
+    <div class="Half" style="background-color: rgb(26, 230, 162); margin-top: 101vh;">
+
+    </div>
     <!--- Latest Albums and Films - HALF --->
-    <div class="Half" style="background-color: aliceblue; margin-top: 251vh;"></div>
+    <div class="Half" style="background-color: rgb(182, 21, 179); margin-top: 0vh;">
+        <div class="HM-Album-Container">
+            <img src="album.jpg" alt="Album Cover" class="album-cover">
+            <div class="HM-Album-Info">
+                <h2 class="title">Album Title</h2>
+                <p class="artist">Artist Name</p>
+                <p class="album">Album Name</p>
+                <p class="date">Release Date: YYYY-MM-DD</p>
+            </div>
+        </div>
+        <div class="HM-Album-Container">
+            <img src="album.jpg" alt="Album Cover" class="album-cover">
+            <div class="HM-Album-Info">
+                <h2 class="title">Album Title</h2>
+                <p class="artist">Artist Name</p>
+                <p class="album">Album Name</p>
+                <p class="date">Release Date: YYYY-MM-DD</p>
+            </div>
+        </div>
+        <div class="HM-Album-Container">
+            <img src="album.jpg" alt="Album Cover" class="album-cover">
+            <div class="HM-Album-Info">
+                <h2 class="title">Album Title</h2>
+                <p class="artist">Artist Name</p>
+                <p class="album">Album Name</p>
+                <p class="date">Release Date: YYYY-MM-DD</p>
+            </div>
+        </div>
+        <div class="HM-Album-Container">
+            <img src="album.jpg" alt="Album Cover" class="album-cover">
+            <div class="HM-Album-Info">
+                <h2 class="title">Album Title</h2>
+                <p class="artist">Artist Name</p>
+                <p class="album">Album Name</p>
+                <p class="date">Release Date: YYYY-MM-DD</p>
+            </div>
+        </div>
+
+
+    </div>
     <!--- Featured Programming & Beats - FULL --->
     <!--- Portfolio Bars - half --->
     
