@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Ko-KR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,15 +16,15 @@
         <div id="HeaderCenter">
             <h1> 이승재 </h1>
             <h3> 다양한 분야에서 경험을 쌓아온 사람입니다! </h3>
-            <h3 style="font-size: 1.25vw; margin-top: -4vh;"> 저는 Derek Ronquillo이고 예명은 이승재입니다.</h3>
+            <h3 style="font-size: 1.25vw;" id="HDR-3-move"> 저는 Derek Ronquillo이고 예명은 이승재입니다.</h3>
         </div>
     </div>
 
     <!-- STABLE -->     <!--- Featured Performance - FULL --->    
-    <div class="Full Performance" style=" background-position: center; background-size: 100% 100%;" id="Perf-Control">
+    <div class="Full Performance" id="Perf-Control">
         <div id="Perf-Side">
             <div class="words">
-            <h1 style="font-size: 2.8vw; padding: 0.6vw 0.6vw; background: rgba(255, 255, 255, 0.5); border-radius: 0.75vw; border: 0.1vw solid white; width: 30vh; margin-left: auto; margin-right: auto;"> 음악 공연 </h1>
+            <h1 style="font-size: 2.8vw; padding: 0.6vw 0.6vw; background: rgba(255, 255, 255, 0.5); border-radius: 0.75vw; border: 0.1vw solid white; width: auto;" id="Perf-H1-width"> 음악 공연 </h1>
             <h1 style="font-size: 1.2vw;color: rgb(0, 0, 82);"> 이승재(Derek) </h1>
             <h1 style="font-size: 1.1vw;color: #444; font-style: italic;"> 2024년 07월 09일 11:05[KST] </h1>
             <h1 style="font-size: 1.6vw;color: #a42036;"> "Spain - Chick Corea" </h1>
@@ -35,7 +35,7 @@
     </div>
 
     <!-- STABLE -->     <!--- Featured Music Demo - HALF --->
-    <div class="Half Demo" style="background-color: rgb(26, 230, 162); margin-top: 101vh;">
+    <div class="Half Demo">
         <div class="HM-Demo-Container">
             <img src="album.jpg" alt="Album Cover" class="demo-cover">
             <div class="HM-Demo-Info">
@@ -46,12 +46,12 @@
                 <button>추천 음악 데모 보기</button>
             </div>
         </div>
-        <div style="height: 30vh;text-align: center;">
-            <h1 style="font-size: 3vw; padding: 0.6vw 0.6vw; background: rgba(255, 255, 255, 0.7); border-radius: 0.75vw; border: 0.1vw solid white; width: 44vh; margin-left: auto; margin-right: auto;">특집 음악 데모</h1>
-            <p style="color: rgb(0, 0, 0); font-size: 0.85vw; margin-top: -20px;">*최신 음악 앨범 2개와 최신 영화 2편을 보여주었습니다.</p>
+        <div style="height: 30vh;text-align: center; opacity: 0; animation: animatefade 2s; transition: 1.5s ease;" id="Demofade">
+            <h1 style="font-size: 3vw; padding: 0.6vw 0.6vw; background: rgba(255, 255, 255, 0.7); border-radius: 0.75vw; border: 0.1vw solid white; width: auto; margin-left: auto; margin-right: auto;">특집 음악 데모</h1>
+            <p style="color: rgb(0, 0, 0); font-size: 0.85vw; margin-top: -10px;">*최신 음악 데모 2편을 보여주었습니다.</p>
             <button id="HBTN" style="margin-top: -1px;"> <i class="fa fa-video-camera"></i> 모든 데모 보기 </button>
         </div>
-        <div class="HM-Demo-Container">
+        <div class="HM-Demo-Container" id="tria">
             <img src="album.jpg" alt="Album Cover" class="demo-cover">
             <div class="HM-Demo-Info">
                 <h2 class="demo-h2">Album Title</h2>
@@ -64,11 +64,11 @@
     </div>
 
     <!-- STABLE -->     <!--- Latest Albums and Films - HALF --->
-    <div class="Half Films" style="margin-top: 0vh; background: url(Film-Music.png), rgba(255, 255, 255, 0.6);background-position: center;background-size: cover;background-blend-mode: soft-light;">
+    <div class="Half Films">
         
-        <div style="height: 30vh;text-align: center">
-            <h1 style="font-size: 2.6vw; padding: 0.6vw 0.6vw; background: rgba(255, 255, 255, 0.7); border-radius: 0.75vw; border: 0.1vw solid white; width: 48vh; margin-left: auto; margin-right: auto;">최신 앨범 및 영화</h1>
-            <p style="color: rgb(0, 0, 0); font-size: 0.85vw; margin-top: -20px;">*최신 음악 앨범 2개와 최신 영화 2편을 보여주었습니다.</p>
+        <div style="height: 30vh;text-align: center; opacity: 0; transition: 4s ease;" id="Film-animation">
+            <h1 style="font-size: 2.6vw; padding: 0.6vw 0.6vw; background: rgba(255, 255, 255, 0.7); border-radius: 0.75vw; border: 0.1vw solid white; width: auto; margin-left: auto; margin-right: auto;">최신 앨범 및 영화</h1>
+            <p style="color: rgb(0, 0, 0); font-size: 0.85vw; margin-top: -10px;">*최신 음악 앨범 2개와 최신 영화 2편을 보여주었습니다.</p>
             <button id="HBTN" style="margin-top: -1px;"> <i class="fa fa-plus-circle"></i> 전체 보기 </button>
         </div>
         
