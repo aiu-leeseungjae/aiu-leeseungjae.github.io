@@ -1,3 +1,157 @@
+/* CSS DESIGN SHEET BY DEREK JUSTIN P RONQUILLO(LEE SEUNGJAE) ON 2024/07/23. ALL RIGHTS RESERVED. NO OTHER REFERENCES */
+
+
+/* ? BODY & HTML CONFIGURATIONS ? */
+html { 
+    height: 100%; 
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+body {
+    margin: 0;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    background:rgb(226, 243, 255);
+    font-family: 'Segoe UI Variable', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* ? NavBar Settings and Footer Settings ? */
+#navbar {
+    list-style-type: none;
+    position: fixed;
+    top: -50px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-bottom: 0.1vh solid rgb(176, 176, 176);
+    height: 7vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: top 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    z-index: 1;
+    backdrop-filter: blur(15px);
+}
+#navbar.show {
+    top: 0;
+    opacity: 1;
+}
+li {
+    float: left;
+}
+li a, .dropbtn {
+    display: inline-block;
+    color: rgb(32, 32, 32);
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    text-decoration: none;
+    font-size: 1.39vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 5px;
+    animation: fadebtn 0.5s;
+}
+
+
+/* ? ANIMATIONS ? */
+@keyframes fadebtn{from{background-color: rgba(255, 255, 255, 0);} to{background-color: rgba(255, 255, 255, 0.65);}}
+@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+@keyframes animatefade{from{opacity: 0;} to{opacity: 1;}}
+
+
+/* ? HEADER IMAGE ? */
+.Header{
+    background: url("HEADD.png");
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.Header h1{
+    color: rgb(36, 36, 36);
+    font-size: 10vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    animation:animatezoom 2s;
+}
+.Header h3{
+    text-align: center;
+    font-size: 2vw;
+    color: rgb(52, 52, 52);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -0px;
+    animation: animatefade 4s;
+}
+#HeaderCenter{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ? CONTAINERS ? */
+.Full {
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 100.5vh;
+    overflow-x: hidden;
+
+}
+.Half{
+    width: 100vw;
+    height: 50vh;
+    overflow-x: hidden;
+}
+.Films{
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    display: grid;
+    grid-template-columns:auto auto auto auto auto;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow-x: hidden;
+    margin-top: 0vh; 
+    background: url(Film-Music.png), rgba(255, 255, 255, 0.6);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    width: 100vw;
+}
+.Demo{
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow-x: hidden;
+    background-color: rgb(26, 230, 162); 
+    margin-top: 101vh;
+}
+
+
+/* ? Performance Section ? */
 .Performance{
     width: 100vw;
     height: 100vh;
@@ -5,7 +159,10 @@
     left: 0;
     position:absolute;
     overflow: hidden;
-    transition: 2s ease;}
+    transition: 2s ease;
+    background-position: center; 
+    background-size: 100% 100%;
+}
 #Peerformance{
     width: 90vw;
     height: 90vh;
@@ -35,145 +192,85 @@
     font-family: arial;
     text-align: center;
 }
-html { height: 100%; }
-body {
-    margin: 0;
-    -webkit-text-size-adjust: 100%;
-    overflow-x: hidden;
-    background:rgb(226, 243, 255);
-    font-family: 'Segoe UI Variable', Tahoma, Geneva, Verdana, sans-serif;
-}
 
-#navbar {
-    list-style-type: none;
-    position: fixed;
-    top: -50px;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
+
+/* ? Demo Section ? */
+.HM-Demo-Container {
+    position: relative;
+    width: 32.5vw;
+    height: 32vh;
+    border-radius: 10px;
     overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.75);
-    border-bottom: 0.1vh solid rgb(176, 176, 176);
-    height: 7vh;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    transition: top 0.5s ease, opacity 0.5s ease;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.HM-Demo-Container:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+.demo-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.HM-Demo-Container:hover .Demo-cover {
+    transform: scale(1.05);
+}
+.HM-Demo-Info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    box-sizing: border-box;
     opacity: 0;
-    z-index: 1;
-    backdrop-filter: blur(15px);
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
-#navbar.show {
-    top: 0;
+.HM-Demo-Container:hover .HM-Demo-Info {
     opacity: 1;
+    transform: translateY(0);
+}
+.demo-h2 {
+    font-size: 1.5vw;
+    font-weight: 600;
+    color: #333333;
+}
+.demo-p{
+    margin: 0px 0;
+    font-size: 0.8vw;
+    color: #555555;
 }
 
-li {
-    float: left;
-}
-
-li a, .dropbtn {
-    display: inline-block;
-    color: rgb(32, 32, 32);
-    text-align: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    text-decoration: none;
-    font-size: 1.39vw;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-@keyframes fadebtn{from{background-color: rgba(255, 255, 255, 0);} to{background-color: rgba(255, 255, 255, 0.65);}}
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: rgba(255, 255, 255, 0.65);
-    border-radius: 5px;
-    animation: fadebtn 0.5s;
-    }
-    .Header{
-    background: url("HEADD.png");
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: soft-light;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-}
-.Header h1{
-    color: rgb(36, 36, 36);
-    font-size: 10vw;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    text-align: center;
-    animation:animatezoom 2s;
-}
-@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
-.Header h3{
-    text-align: center;
-    font-size: 2vw;
-    color: rgb(52, 52, 52);
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: -0px;
-    animation: animatefade 4s;
-}
-@keyframes animatefade{from{opacity: 0;} to{opacity: 1;}}
-#HeaderCenter{
-    margin-left: auto;
-    margin-right: auto;
-}
-.Full {
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: soft-light;
-    width: 100%;
-    height: 100vh;
-    margin-top: 100.5vh;
-
-}
-.Half{
-    width: 100%;
-    height: 50vh;
-}
-.Films{
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: soft-light;
-    display: grid;
-    grid-template-columns:auto auto auto auto auto;
-    grid-template-rows: auto;
-    align-items: center;
-    justify-content: space-evenly;
-}
+/* ? ALBUMS AND FIMS SECTION ? */
+/*--?ALBUMS--*/
 .HM-Album-Container {
     position: relative;
-    width: 28vh;
-    height: 28vh;
+    width: 27vh;
+    height: 27vh;
     border-radius: 20px;
     overflow: hidden;
     background-color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-
 .HM-Album-Container:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
 }
-
 .album-cover {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
-
 .HM-Album-Container:hover .album-cover {
     transform: scale(1.05);
 }
-
 .HM-Album-Info {
     position: absolute;
     bottom: 0;
@@ -187,52 +284,46 @@ li a:hover, .dropdown:hover .dropbtn {
     transform: translateY(20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 .HM-Album-Container:hover .HM-Album-Info {
     opacity: 1;
     transform: translateY(0);
 }
-
 .title {
     margin: 0 0 8px 0;
     font-size: 1.25vw;
     font-weight: 600;
     color: #333333;
 }
-
 .artist, .album, .date {
     margin: 0px 0;
     font-size: 0.8vw;
     color: #555555;
 }
 
+/*--?FILMS--*/
 .HM-Film-Container {
     position: relative;
-    width: 32vh;
-    height: 32vh;
+    width: 30vh;
+    height: 30vh;
     border-radius: 10px;
     overflow: hidden;
     background-color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-
 .HM-Film-Container:hover {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
 }
-
 .Film-cover {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
-
 .HM-Film-Container:hover .Film-cover {
     transform: scale(1.05);
 }
-
 .HM-Film-Info {
     position: absolute;
     bottom: 0;
@@ -246,18 +337,15 @@ li a:hover, .dropdown:hover .dropbtn {
     transform: translateY(20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 .HM-Film-Container:hover .HM-Film-Info {
     opacity: 1;
     transform: translateY(0);
 }
-
 .F-title {
     font-size: 1.5vw;
     font-weight: 600;
     color: #333333;
 }
-
 .F-artist, .F-album, .F-date {
     margin: 0px 0;
     font-size: 0.8vw;
@@ -265,6 +353,7 @@ li a:hover, .dropdown:hover .dropbtn {
 }
 
 
+/* BUTTONS SETTINGS */
 .HM-Film-Info button {
     background-color: #0078d4;
     color: white;
@@ -278,7 +367,6 @@ li a:hover, .dropdown:hover .dropbtn {
 .HM-Film-Info button:hover {
     background-color: #005a9e;
 }
-
 .HM-Album-Info button {
     background-color: #0078d4;
     color: white;
@@ -324,79 +412,6 @@ li a:hover, .dropdown:hover .dropbtn {
 #HBTN:hover {
     background-color: #005a9e;
 }
-
-.Demo{
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: soft-light;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: auto;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-
-
-.HM-Demo-Container {
-    position: relative;
-    width: 32.5vw;
-    height: 32vh;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.HM-Demo-Container:hover {
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
-}
-
-.demo-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.HM-Demo-Container:hover .Demo-cover {
-    transform: scale(1.05);
-}
-
-.HM-Demo-Info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(10px);
-    padding: 20px;
-    box-sizing: border-box;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.HM-Demo-Container:hover .HM-Demo-Info {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.demo-h2 {
-    font-size: 1.5vw;
-    font-weight: 600;
-    color: #333333;
-}
-
-.demo-p{
-    margin: 0px 0;
-    font-size: 0.8vw;
-    color: #555555;
-}
-
-
 .HM-Demo-Info button {
     background-color: #0078d4;
     color: white;
