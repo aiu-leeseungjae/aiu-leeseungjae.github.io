@@ -6,121 +6,143 @@
     <link rel="stylesheet" href="7.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Style.css">
-    <title>이승재 - 홈</title>
-
-        <script>
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    // Get the height of the header image
-    var headerHeight = document.querySelector('.Header').offsetHeight;
-
-    // Check if the scroll position is greater than the header height
-    if (document.body.scrollTop > headerHeight || document.documentElement.scrollTop > headerHeight) {
-        // Add the "show" class to the navbar
-        document.getElementById("navbar").classList.add("show");
-        document.getElementById("Perf-Side").style.width = "20%";
-        document.getElementById("Perf-Side").style.marginLeft = "0";
-        document.getElementById("Peerformance").style.opacity = "100";
-        document.getElementById("Peerformance").style.width = "80%";
-        document.getElementById("Perf-Control").style.background = "#cdd0ff";
-    } else {
-        // Remove the "show" class from the navbar
-        document.getElementById("navbar").classList.remove("show");
-    }
-}
-
-        </script>
+    <script src="JScript.js" defer></script>
+    <title>이승재 - 홈</title>  
 </head>
 <body class="has-scrollbar">
 
-    <!--- HEADER IMAGE - FULL --->
+    <!-- STABLE -->     <!--- HEADER IMAGE - FULL --->
     <div class="Header">
         <div id="HeaderCenter">
             <h1> 이승재 </h1>
             <h3> 다양한 분야에서 경험을 쌓아온 사람입니다! </h3>
+            <h3 style="font-size: 1.25vw; margin-top: -4vh;"> 저는 Derek Ronquillo이고 예명은 이승재입니다.</h3>
         </div>
     </div>
 
-    <!--- Featured Performance - FULL --->
-    <div class="Full Performance" id="Perf-Control">
+    <!-- STABLE -->     <!--- Featured Performance - FULL --->    
+    <div class="Full Performance" style=" background-position: center; background-size: 100% 100%;" id="Perf-Control">
         <div id="Perf-Side">
-            <h1 style="font-size: 38px;"> Performance </h1>
-            <h1 style="font-size: 18px; margin-top: -17px; color: rgb(0, 0, 82);"> By 이승재 </h1>
-            <h1 style="font-size: 15px; margin-top: -70px; color: #444; font-style: italic;"> 2024-09-09 </h1>
-            <h1 style="font-size: 20px; margin-top: -90px; color: #a42036;"> "Spain - Chick Corea" </h1>
-            <h1 style="font-size: 27px; margin-top: -100px;"> @MusicForce </h1>
+            <div class="words">
+            <h1 style="font-size: 2.8vw; padding: 0.6vw 0.6vw; background: rgba(255, 255, 255, 0.5); border-radius: 0.75vw; border: 0.1vw solid white; width: 30vh; margin-left: auto; margin-right: auto;"> 음악 공연 </h1>
+            <h1 style="font-size: 1.2vw;color: rgb(0, 0, 82);"> 이승재(Derek) </h1>
+            <h1 style="font-size: 1.1vw;color: #444; font-style: italic;"> 2024년 07월 09일 11:05[KST] </h1>
+            <h1 style="font-size: 1.6vw;color: #a42036;"> "Spain - Chick Corea" </h1>
+            <h1 style="font-size: 1.7vw;"> @MusicForce </h1></div>
+
         </div>
-        <img src="HEAD.png" alt="" id="Peerformance">
+        <iframe id="Peerformance" src="https://www.youtube.com/embed/ZqksBvfwqzE" title="[4K] KIM SEJEONG - “In the Rain” Band LIVE Concert [it&#39;s Live] K-POP live music show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
-    <!--- Featured Music Demo - HALF --->
-    <div class="Half" style="background-color: rgb(26, 230, 162); margin-top: 101vh;">
+    <!-- STABLE -->     <!--- Featured Music Demo - HALF --->
+    <div class="Half Demo" style="background-color: rgb(26, 230, 162); margin-top: 101vh;">
+        <div class="HM-Demo-Container">
+            <img src="album.jpg" alt="Album Cover" class="demo-cover">
+            <div class="HM-Demo-Info">
+                <h2 class="demo-h2">Album Title</h2>
+                <p class="demo-p">Album Name</p>
+                <p class="demo-p">Album Name</p>
+                <p class="demo-p">Album Name</p>
+                <button>추천 음악 데모 보기</button>
+            </div>
+        </div>
+        <div style="height: 30vh;text-align: center;">
+            <h1 style="font-size: 3vw; padding: 0.6vw 0.6vw; background: rgba(255, 255, 255, 0.7); border-radius: 0.75vw; border: 0.1vw solid white; width: 44vh; margin-left: auto; margin-right: auto;">특집 음악 데모</h1>
+            <p style="color: rgb(0, 0, 0); font-size: 0.85vw; margin-top: -20px;">*최신 음악 앨범 2개와 최신 영화 2편을 보여주었습니다.</p>
+            <button id="HBTN" style="margin-top: -1px;"> <i class="fa fa-video-camera"></i> 모든 데모 보기 </button>
+        </div>
+        <div class="HM-Demo-Container">
+            <img src="album.jpg" alt="Album Cover" class="demo-cover">
+            <div class="HM-Demo-Info">
+                <h2 class="demo-h2">Album Title</h2>
+                <p class="demo-p">Album Name</p>
+                <p class="demo-p">Album Name</p>
+                <p class="demo-p">Album Name</p>
+                <button>추천 음악 데모 보기</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- STABLE -->     <!--- Latest Albums and Films - HALF --->
+    <div class="Half Films" style="margin-top: 0vh; background: url(Film-Music.png), rgba(255, 255, 255, 0.6);background-position: center;background-size: cover;background-blend-mode: soft-light;">
+        
+        <div style="height: 30vh;text-align: center">
+            <h1 style="font-size: 2.6vw; padding: 0.6vw 0.6vw; background: rgba(255, 255, 255, 0.7); border-radius: 0.75vw; border: 0.1vw solid white; width: 48vh; margin-left: auto; margin-right: auto;">최신 앨범 및 영화</h1>
+            <p style="color: rgb(0, 0, 0); font-size: 0.85vw; margin-top: -20px;">*최신 음악 앨범 2개와 최신 영화 2편을 보여주었습니다.</p>
+            <button id="HBTN" style="margin-top: -1px;"> <i class="fa fa-plus-circle"></i> 전체 보기 </button>
+        </div>
+        
+        <div class="HM-Album-Container">
+            <img src="album.jpg" alt="Album Cover" class="album-cover">
+            <div class="HM-Album-Info">
+                <h2 class="title">Album Title</h2>
+                <p class="artist">Artist Name</p>
+                <p class="album">Album Name</p>
+                <p class="date">Release Date: YYYY-MM-DD</p>
+                <button>이 노래 듣기</button>
+            </div>
+        </div>
+        <div class="HM-Album-Container">
+            <img src="album.jpg" alt="Album Cover" class="album-cover">
+            <div class="HM-Album-Info">
+                <h2 class="title">Album Title</h2>
+                <p class="artist">Artist Name</p>
+                <p class="album">Album Name</p>
+                <p class="date">Release Date: YYYY-MM-DD</p>
+                <button>이 노래 듣기</button>
+            </div>
+        </div>
+        <div class="HM-Film-Container">
+            <img src="album.jpg" alt="Album Cover" class="Film-cover">
+            <div class="HM-Film-Info">
+                <h2 class="F-title">Film Title</h2>
+                <p class="F-artist">ROLE:</p>
+                <p class="F-album">Release Date </p>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <button>자세히 보기</button>
+            </div>
+        </div>
+        <div class="HM-Film-Container">
+            <img src="album.jpg" alt="Album Cover" class="Film-cover">
+            <div class="HM-Film-Info">
+                <h2 class="F-title">Film Title</h2>
+                <p class="F-artist">ROLE:</p>
+                <p class="F-album">Release Date </p>
+                <div class="stars">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <button>자세히 보기</button>
+            </div>
+        </div>
+
 
     </div>
-    <!--- Latest Albums and Films - HALF --->
-    <div class="Half" style="background-color: rgb(182, 21, 179); margin-top: 0vh;">
-        <div class="HM-Album-Container">
-            <img src="album.jpg" alt="Album Cover" class="album-cover">
-            <div class="HM-Album-Info">
-                <h2 class="title">Album Title</h2>
-                <p class="artist">Artist Name</p>
-                <p class="album">Album Name</p>
-                <p class="date">Release Date: YYYY-MM-DD</p>
-            </div>
-        </div>
-        <div class="HM-Album-Container">
-            <img src="album.jpg" alt="Album Cover" class="album-cover">
-            <div class="HM-Album-Info">
-                <h2 class="title">Album Title</h2>
-                <p class="artist">Artist Name</p>
-                <p class="album">Album Name</p>
-                <p class="date">Release Date: YYYY-MM-DD</p>
-            </div>
-        </div>
-        <div class="HM-Album-Container">
-            <img src="album.jpg" alt="Album Cover" class="album-cover">
-            <div class="HM-Album-Info">
-                <h2 class="title">Album Title</h2>
-                <p class="artist">Artist Name</p>
-                <p class="album">Album Name</p>
-                <p class="date">Release Date: YYYY-MM-DD</p>
-            </div>
-        </div>
-        <div class="HM-Album-Container">
-            <img src="album.jpg" alt="Album Cover" class="album-cover">
-            <div class="HM-Album-Info">
-                <h2 class="title">Album Title</h2>
-                <p class="artist">Artist Name</p>
-                <p class="album">Album Name</p>
-                <p class="date">Release Date: YYYY-MM-DD</p>
-            </div>
-        </div>
-        <div class="HM-Album-Container">
-            <img src="album.jpg" alt="Album Cover" class="album-cover">
-            <div class="HM-Album-Info">
-                <h2 class="title">Album Title</h2>
-                <p class="artist">Artist Name</p>
-                <p class="album">Album Name</p>
-                <p class="date">Release Date: YYYY-MM-DD</p>
-            </div>
-        </div>
 
-
-    </div>
     <!--- Featured Programming & Beats - FULL --->
+
     <!--- Portfolio Bars - half --->
     
-    <!--- NAVIGATION BAR --->
+    <!-- STABLE -->     <!--- NAVIGATION BAR --->
     <ul id="navbar">
         <li><a href="#home">홈</a></li>
         <li><a href="#home">게시물</a></li>
         <li><a href="#news">영화 및 음반 목록</a></li>
         <li><a href="#home">공연들</a></li>
-        <li><a href="#news">작업들</a></li>
+        <li><a href="#news">작업</a></li>
         <li><a href="#home">뉴스 및 블로그</a></li>
         <li><a href="#news">정보</a></li>
     </ul>
 
+    <!-- STABLE -->     <!--- FOOTER BAR --->
 </body>
 </html>
