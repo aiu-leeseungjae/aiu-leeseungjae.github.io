@@ -6,9 +6,9 @@ window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
     // Get the height of the header image
     var headerHeight = document.querySelector('.Header').offsetHeight;
-
+    var perfHeight = document.querySelector('.Performance').offsetHeight;
     // Check if the scroll position is greater than the header height
-    if (document.body.scrollTop > headerHeight || document.documentElement.scrollTop > headerHeight) {
+    if (document.body.scrollTop > headerHeight/2 || document.documentElement.scrollTop > headerHeight/2) {
         // Add the "show" class to the navbar
         document.getElementById("navbar").classList.add("show");
         document.getElementById("Perf-Side").style.width = "20%";
@@ -19,6 +19,15 @@ function scrollFunction() {
     } else {
         // Remove the "show" class from the navbar
         document.getElementById("navbar").classList.remove("show");
+    }
+    if (document.body.scrollTop > perfHeight+headerHeight/4 || document.documentElement.scrollTop > perfHeight+headerHeight/4) {
+        // Add the "show" class to the navbar
+        document.getElementById("Demofade").style.opacity = "1";
+        document.getElementById("Film-animation").style.opacity = "1";
+        document.getElementById("Film-animation").style.animation = "animatezoom 2s";
+    } else {
+        // Remove the "show" class from the navbar
+
     }
 }
 
