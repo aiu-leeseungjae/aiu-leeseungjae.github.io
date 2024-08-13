@@ -30,6 +30,7 @@
     font-family: apple;
     font-size: 60vh;
     margin-top: 25vh;
+    position: relative;
     font-weight: bold;
     background: linear-gradient(90deg, rgb(115, 36, 36), rgb(115, 82, 39), rgb(143, 132, 49), rgb(44, 133, 44), rgb(37, 43, 118));
     -webkit-background-clip: text;
@@ -190,7 +191,7 @@ function autostart(){
 </head>
 <body>
     <video src="BG.mp4" id="vidback"></video>
-    <i class="material-icons" style="font-size:8vh;transform:rotate(90deg);color:#111;">battery_charging_full</i>
+    <i class="material-icons" style="font-size:8vh;transform:rotate(90deg); margin:20px; position:fixed; top:0; Left:0; color:#111;">battery_charging_full</i>
     <div class="container">
         <div class="clock">
             <div class="timer" id="timerDisplay">00:00</div>
