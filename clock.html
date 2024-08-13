@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        @font-face {
+    font-family: apple;
+    src: url(Borel-Regular.ttf);
+  }
+#vidback{
+    position: fixed;
+    z-index: -1;
+    top:0;
+    left:0;
+    width: 200vw;
+    height: 150vh;
+    margin-left:-50vw;
+}
+.container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#timerDisplay{
+    font-family: apple;
+    font-size: 60vh;
+    margin-top: 25vh;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgb(115, 36, 36), rgb(115, 82, 39), rgb(143, 132, 49), rgb(44, 133, 44), rgb(37, 43, 118));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 7s ease-in-out infinite alternate;
+}
+@keyframes textShine {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+.topper{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 40px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#minutes{
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    background: rgba(255, 255, 255, 0.3);
+    width: 100px;
+    margin-right: 25px;
+}
+a{
+    padding: 5px;
+    border: 1px solid black;
+    width: 90px;
+    border-radius: 8px;
+    background: rgba(59, 160, 255, 0.7);
+    text-align: center;
+}@font-face {
+    font-family: apple;
+    src: url(Borel-Regular.ttf);
+  }
+#vidback{
+    position: fixed;
+    z-index: -1;
+    top:0;
+    left:0;
+    width: 200vw;
+    height: 150vh;
+    margin-left:-50vw;
+}
+.container{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#timerDisplay{
+    font-family: apple;
+    font-size: 60vh;
+    margin-top: 25vh;
+    font-weight: bold;
+    background: linear-gradient(90deg, rgb(115, 36, 36), rgb(115, 82, 39), rgb(143, 132, 49), rgb(44, 133, 44), rgb(37, 43, 118));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    background-size: 500% auto;
+    animation: textShine 7s ease-in-out infinite alternate;
+}
+@keyframes textShine {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+.topper{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 40px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#minutes{
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    background: rgba(255, 255, 255, 0.3);
+    width: 100px;
+    margin-right: 25px;
+}
+a{
+    padding: 5px;
+    border: 1px solid black;
+    width: 90px;
+    border-radius: 8px;
+    background: rgba(59, 160, 255, 0.7);
+    text-align: center;
+}
+    </style>
+    <script>
+        let timer;
+let countdown;
+
+function startTimer() {
+    const minutesInput = document.getElementById('minutes').value;
+    const timerDisplay = document.getElementById('timerDisplay');
+    
+    if (!minutesInput || minutesInput <= 0) {
+        alert("Please enter a valid number of minutes.");
+        return;
+    }
+
+    clearInterval(timer);
+
+    let timeLeft = minutesInput * 60;
+
+    timer = setInterval(() => {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+
+        timerDisplay.textContent = ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')};
+
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            alert("Time's up!");
+        } else {
+            timeLeft--;
+        }
+    }, 1000);
+}
+function Operation(){
+    autostart();
+    startTimer();
+}
+function autostart(){
+    document.getElementById("vidback").load();
+    document.getElementById("vidback").play();
+}
+    </script>
+    <title>Coding Timer</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <video src="BG.mp4" id="vidback"></video>
+    <i class="material-icons" style="font-size:8vh;transform:rotate(90deg);color:#111;">battery_charging_full</i>
+    <div class="container">
+        <div class="clock">
+            <div class="timer" id="timerDisplay">00:00</div>
+        </div>
+
+        <div class="topper">
+        <input type="number" id="minutes" placeholder="분이 얼마나?" min="1">
+        <a onclick="Operation()">시작</a>
+    </div>
+</div>
+    
+</body>
+</html>
